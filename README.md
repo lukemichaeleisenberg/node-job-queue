@@ -21,25 +21,25 @@ After that, you should be able to access the server at localhost:3000
 
 #### Request ####
 
-`
+```
 	{
 		"url": "https://www.google.com" (The url that you want to process via the job queue. Must include HTTP protocol [HTTP or HTTPS])
 	}
-`
+```
 
 #### Response ####
 
-`
+```
 	{
 	  "id": 7 (The ID of the newly created job)
 	}
-`
+```
 
-###GET /job/:id ###
+### GET /job/:id ###
 
 #### Response ####
 
-`
+```
 {
   "job": {
     "state": "complete" (current state of the job),
@@ -50,4 +50,4 @@ After that, you should be able to access the server at localhost:3000
   "response": {
     "status": 200 (The status code recieved by your request),
     "response": "(html-body)" (The response body of the html page requested.)}
-`
+```
