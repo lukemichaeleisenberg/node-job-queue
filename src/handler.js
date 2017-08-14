@@ -33,7 +33,6 @@ handler.createJob = function(req, res) {
 
 	job.save((err) => {
 		if (err) {
-			console.log(err)
 			res.status(500).send({"error":"An internal server error occurred."});
 		}
 		if (!err) {
@@ -45,11 +44,9 @@ handler.createJob = function(req, res) {
 /**
  * Process listener that processes the queue as jobs come in.
  */
-module.exports = handler, jobQueue.process('webCallJob', function (job, done) {
+jobQueue.process('webCallJob', function (job, done) {
 	axios.get(job.data.url)
 	.then( function(response) {
-		console.log('Job', job.id, 'is done');
-		console.log(response);
 		done(null, { 
 			"status":response.status, 
 			"response":response.data
@@ -58,3 +55,6 @@ module.exports = handler, jobQueue.process('webCallJob', function (job, done) {
 		done("The url you provided did not recieve a response. Please verify the url, and be sure that you are specifying http protocol (http:// or https://)"); 
 	});
 });
+
+
+module.exports = handler, jobQueue

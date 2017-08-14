@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 var router = require('./src/router');
 
-var app = express();
+var app = module.exports = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
