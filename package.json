@@ -1,0 +1,21 @@
+{
+  "name": "massdropapplication",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "startdev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "axios": "^0.16.2",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "kue": "^0.11.6",
+    "mocha": "^3.5.0",
+    "morgan": "~1.8.1",
+    "nodemon": "^1.11.0"
+  }
+}
