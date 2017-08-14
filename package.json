@@ -9,15 +9,11 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "~1.17.1",
-    "chai": "^4.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
-    "express-mock-request": "0.0.2",
     "kue": "^0.11.6",
-    "mocha": "^3.5.0",
     "morgan": "~1.8.1",
     "nodemon": "^1.11.0",
-    "sinon": "^3.2.0"
   }
 }
