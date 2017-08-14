@@ -2,7 +2,7 @@
 
 ## Dependencies ##
 
-Redis
+Redis,
 Node
 
 ## Setup ##
