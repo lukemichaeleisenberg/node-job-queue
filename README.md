@@ -49,5 +49,7 @@ After that, you should be able to access the server at localhost:3000
   },
   "response": {
     "status": 200 (The status code recieved by your request),
-    "response": "(html-body)" (The response body of the html page requested.)}
+    "response": "(html-body)" (The response body of the html page requested.)
+   }
+}
 ```
