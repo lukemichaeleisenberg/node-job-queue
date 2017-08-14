@@ -1,11 +1,11 @@
-# node-job-queue
+# node-job-queue #
 
-##Dependencies
+## Dependencies ##
 
 Redis
 Node
 
-##Setup
+## Setup ##
 
 In the root directory, enter: 
 
@@ -15,11 +15,11 @@ npm start
 
 After that, you should be able to access the server at localhost:3000
 
-##Endpoints
+## Endpoints ##
 
-###POST /job
+### POST /job ###
 
-####Request
+#### Request ####
 
 `
 	{
@@ -27,7 +27,7 @@ After that, you should be able to access the server at localhost:3000
 	}
 `
 
-####Response
+#### Response ####
 
 `
 	{
@@ -35,12 +35,19 @@ After that, you should be able to access the server at localhost:3000
 	}
 `
 
-###GET /job/:id
+###GET /job/:id ###
 
-####Response
+#### Response ####
 
 `
-	{
-		"url": "https://www.google.com" 
-	}
+{
+  "job": {
+    "state": "complete" (current state of the job),
+    "created_at": "1502738159778" (timestamp of job creation in miliseconds),
+    "error": "(error message)" (the error message recieved while attempting to process the job [if applicable]),
+    "failed-at": "1502738159779" (the timestamp that the job failed at in miliseconds)
+  },
+  "response": {
+    "status": 200 (The status code recieved by your request),
+    "response": "(html-body)" (The response body of the html page requested.)}
 `
